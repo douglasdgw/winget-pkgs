@@ -6,15 +6,18 @@ PackageVersion: 1.0.9202
 InstallerType: exe
 Scope: user
 InstallModes:
-- interactive
-- silent
-UpgradeBehavior: deny
+  - interactive
+  - silent
 Protocols:
-- discord
+  - discord
 RequireExplicitUpgrade: true
 Installers:
-- Architecture: x64
-  InstallerUrl: https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9202/DiscordSetup.exe
-  InstallerSha256: E699D12DAC99E56118E5D4ADD4065BBC05EDC1C81633B8F9298ABBEC7DFEC18A
+  - Architecture: x64
+    InstallerUrl: https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9202/DiscordSetup.exe
+    InstallerSha256: E699D12DAC99E56118E5D4ADD4065BBC05EDC1C81633B8F9298ABBEC7DFEC18A
+    InstallerType: exe
+    UpgradeBehavior: install
+    InstallerSwitches:
+      Silent: /S
 ManifestType: installer
 ManifestVersion: 1.10.0
